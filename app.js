@@ -31,10 +31,6 @@ passport.use(
       callbackURL: facebookConfig.callback_url,
     },
     function (accessToken, refreshToken, profile, done) {
-      console.log(`AccessToken ${accessToken}`);
-      console.log(`RefreshToken ${refreshToken}`);
-      console.log(`Profile ${profile}`);
-
       return done(null, profile);
     }
   )
